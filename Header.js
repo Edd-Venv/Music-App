@@ -41,12 +41,12 @@ class Header extends React.Component {
     const { data, data2, data3 } = this.state;
     return (
       <React.Fragment>
-        <div>
-          <span
+        <div className="flex-containerHeader">
+          <div
             style={{
-              width: "100px",
+              width: "170px",
               height: "auto",
-              position: "relative",
+              position: "sticky",
               animationName: "header1",
               animationDuration: "4s",
               animationIterationCount: "1",
@@ -60,19 +60,19 @@ class Header extends React.Component {
                 src={data.picture_medium}
                 className="img-thumbnail"
                 style={{
-                  width: "170px",
+                  width: "190px",
                   height: "auto"
                 }}
                 alt=""
                 id="box"
               />
             </a>
-          </span>
-          <span
+          </div>
+          <div
             style={{
-              width: "100px",
+              width: "170px",
               height: "auto",
-              position: "relative",
+              position: "sticky",
               animationName: "header2",
               animationDuration: "4s",
               animationIterationCount: "1",
@@ -85,18 +85,18 @@ class Header extends React.Component {
               <img
                 src={data2.picture_medium}
                 className="img-thumbnail"
-                style={{ width: "170px", height: "auto" }}
+                style={{ width: "190px", height: "auto" }}
                 alt=""
                 id="box"
               />
             </a>
-          </span>
-          <span
+          </div>
+          <div
             style={{
-              width: "100px",
+              width: "170px",
               marginLeft: "700px",
               height: "auto",
-              position: "relative",
+              position: "sticky",
               animationName: "header3",
               animationDuration: "4s",
               animationIterationCount: "1",
@@ -109,12 +109,12 @@ class Header extends React.Component {
               <img
                 src={data3.picture_medium}
                 className="img-thumbnail"
-                style={{ width: "170px", height: "auto" }}
+                style={{ width: "190px", height: "auto" }}
                 alt=""
                 id="box"
               />
             </a>
-          </span>
+          </div>
         </div>
       </React.Fragment>
     );
