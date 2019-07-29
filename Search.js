@@ -8,9 +8,14 @@ class Search extends React.Component {
     this.state = {
       isLoaded: false,
       search: [],
+      Details: [],
       value: "",
       display: "show",
-      stopAudio: "0.5"
+      displayAudioPlayer: "hide",
+      buttonDisplay: "show",
+      stopAudio: "0.5",
+      Video: [],
+      Test: []
     };
   }
 
@@ -28,6 +33,17 @@ class Search extends React.Component {
         stopAudio: "0.5"
       });
     });
+    const apiKey = "";
+    const urlVideo = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${
+      this.state.value
+    }&type=music&info=1&verbose=1&k=${apiKey}`;
+    Axios.get(urlVideo).then(responseVid => {
+      this.setState({
+        Video: responseVid.data.Similar.Info[0].yUrl,
+        Test: responseVid.data.Similar.Info[0].Type
+      });
+    });
+  };
   };
 
   handleChange = event => {
@@ -36,9 +52,18 @@ class Search extends React.Component {
   handleClick = event => {
     this.setState({ display: "hide", stopAudio: "0" });
   };
+handleButtonClick = event => {
+    this.setState({
+      displayAudioPlayer: "show",
+      buttonDisplay: "hide"
+    });
+  };
 
   render() {
-    const { search, isLoaded, display, stopAudio } = this.state;
+    const { search, isLoaded, display, stopAudio,Test,
+      Video,
+      buttonDisplay,
+      displayAudioPlayer } = this.state;
     return (
       <React.Fragment>
         <form onSubmit={this.handleSubmit} style={{ marginLeft: "39%" }}>
@@ -152,6 +177,43 @@ class Search extends React.Component {
                           <small>
                             Remember to pause the audio before closing.
                           </small>
+      {Test === "unknown" ? (
+                        <p
+                          style={{
+                            fontSize: "1.2em",
+                            color: "black",
+                            marginLeft: "3%",
+                            fontWeight: "bold"
+                          }}
+                        >
+                          VIDEO NOT IN DATABASE
+                        </p>
+                      ) : (
+                        <React.Fragment>
+                          <h5
+                            style={{
+                              fontSize: "1.2em",
+                              color: "black",
+                              marginLeft: "3%",
+                              fontWeight: "bold",
+                              marginLeft: "15%"
+                            }}
+                          >
+                            Hit Video
+                          </h5>
+                          <iframe
+                            src={Video}
+                            style={{
+                              marginLeft: "3%",
+                              marginBottom: "30%",
+                              border: "2px solid whitesmoke",
+                              width: "93.8%",
+                              height: "50%"
+                            }}
+                            title="This is a unique title prop"
+                          />
+                        </React.Fragment>
+                      )}
                         </div>
                       </div>
                     </div>
