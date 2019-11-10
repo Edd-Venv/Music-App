@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header.js";
-import Chart from "./components/Chart.js";
-import Search from "./components/Search.js";
+import Header from "./components/Header/Header.js";
+import Chart from "./components/Charts/Chart.js";
+import Search from "./components/Search/Search.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +14,13 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="flex-container">
+        <div
+          style={{
+            maxWidth: "1200px",
+            minWidth: "50%",
+            margin: "0 auto"
+          }}
+        >
           <div>
             <br />
             <br />
@@ -23,42 +29,37 @@ class App extends React.Component {
             <br />
             <h2
               style={{
-                fontSize: "1.7em",
+                fontSize: "1.8rem",
                 fontWeight: "bolder",
-                marginLeft: "39%",
-                width: "40%",
-                height: "auto",
+                textAlign: "center",
                 color: "white"
               }}
             >
               CURRENT TOP THREE ARTISTS
-              <hr style={{ width: "55%", marginRight: "47%" }} />
+              <hr style={{ width: "22%", margin: "0 auto" }} />
             </h2>
             <br />
             <Header />
             <br />
             <h1
               style={{
-                fontSize: "1.8em",
+                fontSize: "1.8rem",
                 fontWeight: "bolder",
-                marginLeft: "47%",
-                width: "10%",
-                height: "auto",
+                textAlign: "center",
                 color: "white"
               }}
             >
               CHARTS
-              <hr style={{ width: "61%", marginRight: "55%" }} />
+              <hr style={{ width: "15%", margin: "0 auto" }} />
             </h1>
             <div style={{ width: "95%" }}>
               <span className="row">
                 <h2
                   style={{
-                    fontSize: "1.5em",
+                    fontSize: "1.5rem",
                     fontWeight: "bolder",
                     marginLeft: "15%",
                     width: "10%",
-                    height: "auto",
                     color: "white"
                   }}
                 >
@@ -67,11 +68,10 @@ class App extends React.Component {
                 </h2>
                 <h2
                   style={{
-                    fontSize: "1.5em",
+                    fontSize: "1.5rem",
                     fontWeight: "bolder",
-                    marginLeft: "23%",
+                    marginLeft: "24%",
                     width: "10%",
-                    height: "auto",
                     color: "white"
                   }}
                 >
@@ -80,15 +80,14 @@ class App extends React.Component {
                 </h2>
                 <h2
                   style={{
-                    fontSize: "1.5em",
+                    fontSize: "1.5rem",
                     fontWeight: "bolder",
-                    marginLeft: "24%",
+                    marginLeft: "20%",
                     width: "10%",
-                    height: "auto",
                     color: "white"
                   }}
                 >
-                  TOP 5 ARTISTS
+                  TOP 6 ARTISTS
                   <hr style={{ width: "100%" }} />
                 </h2>
               </span>
