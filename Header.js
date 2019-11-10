@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import "./Header.css";
 
 class Header extends React.Component {
   constructor(props) {
@@ -42,74 +43,31 @@ class Header extends React.Component {
     return (
       <React.Fragment>
         <div className="flex-containerHeader">
-          <div
-            style={{
-              width: "170px",
-              height: "auto",
-              position: "sticky",
-              animationName: "header1",
-              animationDuration: "4s",
-              animationIterationCount: "1",
-              animationTimingFunction: "ease",
-              animationFillMode: "forwards",
-              animationDelay: "-0.5s"
-            }}
-          >
+          <div className="Header1">
             <a href={data.link} target="_blank" rel="noopener noreferrer">
               <img
                 src={data.picture_medium}
                 className="img-thumbnail"
-                style={{
-                  width: "190px",
-                  height: "auto"
-                }}
                 alt=""
                 id="box"
               />
             </a>
           </div>
-          <div
-            style={{
-              width: "170px",
-              height: "auto",
-              position: "sticky",
-              animationName: "header2",
-              animationDuration: "4s",
-              animationIterationCount: "1",
-              animationTimingFunction: "ease",
-              animationFillMode: "forwards",
-              animationDelay: "-0.5s"
-            }}
-          >
+          <div className="Header2">
             <a href={data2.link} target="_blank" rel="noopener noreferrer">
               <img
                 src={data2.picture_medium}
                 className="img-thumbnail"
-                style={{ width: "190px", height: "auto" }}
                 alt=""
                 id="box"
               />
             </a>
           </div>
-          <div
-            style={{
-              width: "170px",
-              marginLeft: "700px",
-              height: "auto",
-              position: "sticky",
-              animationName: "header3",
-              animationDuration: "4s",
-              animationIterationCount: "1",
-              animationTimingFunction: "ease",
-              animationFillMode: "forwards",
-              animationDelay: "-0.5s"
-            }}
-          >
+          <div className="Header3">
             <a href={data3.link} target="_blank" rel="noopener noreferrer">
               <img
                 src={data3.picture_medium}
                 className="img-thumbnail"
-                style={{ width: "190px", height: "auto" }}
                 alt=""
                 id="box"
               />
