@@ -29,54 +29,7 @@
       crossorigin="anonymous"
     ></script>
 <style>
-/* START OF HEADER ANIMATIONS*/
-@keyframes header1 {
-  from { 
-    left: 100px
-    }
-  to { 
-    left: 400px
-    }
-}
-@keyframes header2 {
-  from{ left: 0px}
-  to{ left: 850px}
-}
-@keyframes header3 {
-  from{ right: 200px}
-  to{ right: 327px}
-}
 
-/* END OF HEADER ANIMATIONS*/
-
-
-/* START OF CLOSE BUTTON*/
-.close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #ffffff;
-        font-size: 60px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-      .close:hover,
-      .close:focus {
-        color: red;
-        text-decoration: none;
-        cursor: pointer;
-      }
-/* END OF CLOSE BUTTON*/
-
-
-/*START OF BOX STYLING*/
-#box:hover {
-box-shadow: 0px 1px 9px whitesmoke;
-opacity: 0.8 grey;
-transition: 0.2s;
-width: 500px
-}
-/*END OF BOX STYLING*/
 
 /* START OF HIDE SEARCH*/
 div.show{
@@ -86,36 +39,6 @@ div.hide{
           display: none
         }
 /* END OF HIDE SEARCH*/
-  
-  /* START OF SEARCH BAR STYLING*/
-.input{
-  border:none;
-}
-#input:hover{
-  border: 2px solid;
-  border-radius:5px;
-  animation-name: borderEffect;
-  animation-duration: 1.5s;
-  animation-delay: -0.5s;
-  animation-iteration-count: 2;
-  animation-timing-function: ease-in-out;
-  transition: 0.3s
-  
-}
-
-@keyframes borderEffect {
-  0%   {border-top-style: solid;
-  border-top-color: whitesmoke;}
-  25%  {border-right-style: solid;
-  border-right-color: whitesmoke;}
-  50%  {border-bottom-style: solid;
-  border-bottom-color: whitesmoke;}
-  100% {
-  border-left-style: solid;
-  border-left-color:whitesmoke;}
-}
-
-/* END OF SEARCH BAR STYLING*/
 
 /* START OF HIDE PLAY BUTTON*/
 div.DisplayButtonShow{
@@ -126,30 +49,25 @@ div.DisplayButtonHide{
         }
 /* END OF HIDE PLAY BUTTON*/
 
-/*START OF AUDIO UI OVERIDE*/
-.react-h5-audio-player{
-  background-color: whitesmoke!important;
-  width: 0%;
-  height: auto;
+/* START OF HIDE DETAILS BUTTON*/
+div.displayDetailsShow{
+  display:block
 }
-.flex{
-display: flex;
-justify-items: center;
-justify-content: center;
-margin-right: 3%;
-border: none
+div.displayDetailsHide{
+          display: none
+        }
+/* END OF HIDE DETAILS BUTTON*/
 
-}
-.toggle-play-wrapper{
-  background-color:white !important;
-  color: white
-}
-.toggle-play-button{
-  background-color: rgb(59, 58, 58) !important;
-  color: rgb(34, 34, 33)
+/*START OF FLEX BOXES */
+
+.search-result-conatiner {
+  width: 20%;
+  margin: 0 auto;
 }
 
-/*END OF AUDIO UI OVERIDE*/
+
+
+
 </style>
 
     <title>Music App</title>
@@ -179,7 +97,7 @@ border: none
             <li class="nav-item active">
               <a
                 class="nav-link"
-                href="https://github.com/Edd-Venv/TV-APP"
+                href="https://github.com/Edd-Venv/Music-App"
                 target="_blank"
                 >GitHub<span class="sr-only">(current)</span></a
               >
